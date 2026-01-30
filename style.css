@@ -46,4 +46,28 @@ li {
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+
+}
+/* ===== MEJORA VISUAL (NO BORRAR NADA DE ARRIBA) ===== */
+
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+button {
+  background: #e75480;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d64570;
+  transform: scale(1.05);
 }
