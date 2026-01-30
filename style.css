@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  background: linear-gradient(135deg, #cce7ff,#99d0ff);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -36,4 +36,5 @@ input, textarea {
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
+
 
