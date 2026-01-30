@@ -33,3 +33,39 @@
   <p id="reminderMessage"></p>
 </div>
 
+</body>
+  <script>
+// Función para que el recordatorio funcione
+document.getElementById('saveReminder').addEventListener('click', function() {
+  const text = document.getElementById('reminderText').value;
+  const time = document.getElementById('reminderTime').value;
+  const message = document.getElementById('reminderMessage');
+
+  if (!text || !time) {
+    alert("Escribe texto y hora del recordatorio");
+    return;
+  }
+
+  // Muestra mensaje debajo del botón
+  message.textContent = `Recordatorio guardado: "${text}" a las ${time}`;
+
+  const now = new Date();
+  const [hours, minutes] = time.split(':').map(Number);
+
+  // Calcula la fecha exacta del recordatorio
+  const reminderDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes, 0);
+
+  let timeout = reminderDate - now;
+
+  // Si la hora ya pasó, programa para mañana
+  if (timeout < 0) {
+    timeout += 24 * 60 * 60 * 1000; // suma 24 horas
+  }
+
+  // Aviso cuando llegue la hora
+  setTimeout(() => {
+    alert(`⏰ ¡Recordatorio! ${text}`);
+  }, timeout);
+});
+</script>
+
