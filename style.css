@@ -37,5 +37,9 @@ input, textarea {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
+body {
+  background: linear-gradient(135deg, #cce7ff, #99d0ff) !important;
+}
+
 
 
